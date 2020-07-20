@@ -1,11 +1,12 @@
-const userRoutes = require("./heroes");
+const heroRoutes = require('./heroes');
 
 const appRouter = (app, fs) => {
-    app.get("/", (req,res) =>{
+    console.log("get");
+    app.get('/', (req,res) =>{
         res.send("welcome to api-server");
     });
 
-    userRoutes(app, fs);
+    heroRoutes(app, fs);
 };
 
 module.exports = appRouter;
